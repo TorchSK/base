@@ -27,7 +27,6 @@
             <div class="i-ph-shopping-bag text-3xl" />
             
             <div class="text-xs font-bold text-white bg-gray-400 px-1.5 py-0.5 rounded-full absolute -top-1 -right-1">
-                {{cart.products.reduce((acc, cur) =>  acc + cur.pivot.qty , 0)}}
             </div>
 
           </nuxt-link>
@@ -70,6 +69,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 
-const cart = useState('cart')
-
+const { cart } = useCart()
 </script>
