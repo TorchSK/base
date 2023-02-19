@@ -69,5 +69,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 
-const { cart } = useCart()
+const { cart } = await useCart()
 </script>
