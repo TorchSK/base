@@ -4,8 +4,14 @@ export const useCart = async () => {
     cookie.value = cookie.value || (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))
 
     // call the api for a cart
-    const { data:cart } = await useApiFetch('carts', {params: {'cookie_id': cookie.value}})
+    const cart = useState('cart', () => {})
     
+    const getCart = async () => {
+        const cart = useState('cart')
+        
+        const { data:response } = await useApiFetch('carts', {params: {'cookie_id': cookie.value}})
+        cart.value = response.value
+    }
 
     const addToCart = async (product, qty) => {
         
@@ -70,6 +76,7 @@ export const useCart = async () => {
 
 
     return {
+        getCart,
         cart,
         addToCart,
         minus,

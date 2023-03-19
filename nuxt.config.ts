@@ -11,6 +11,7 @@ export default defineNuxtConfig({
         '@vueuse/nuxt',
         '@nuxtjs/device',
         '@nuxt/image-edge',
+        '@nuxtjs/web-vitals'
     ],
 
  

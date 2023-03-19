@@ -1,6 +1,4 @@
-import { hash } from 'ohash'
-
-export const useApiFetch = (url, opts) => {
+export const useApiFetch = (url:string, opts = []) => {
 
     let token = useCookie('token')
 
