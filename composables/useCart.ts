@@ -1,14 +1,12 @@
-export const useCart = async () => {
+export const useCart = () => {
 
     const cookie = useCookie('cart')
     cookie.value = cookie.value || (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))
 
     // call the api for a cart
-    const cart = useState('cart', () => {})
+    const cart = useState('cart')
     
-    const getCart = async () => {
-        const cart = useState('cart')
-        
+    const getCart = async () => {  
         const { data:response } = await useApiFetch('carts', {params: {'cookie_id': cookie.value}})
         cart.value = response.value
     }
