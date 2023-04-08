@@ -1,8 +1,3 @@
-import { createResolver } from '@nuxt/kit'
-
-const { resolve } = createResolver(import.meta.url)
-
-
 export default defineNuxtConfig({
 
     modules: [
@@ -32,11 +27,6 @@ export default defineNuxtConfig({
             "@headlessui/vue"
         ]
     },
-
-    css: [
-        resolve('./assets/scss/app.scss')
-    ],
-
     
     runtimeConfig: {
         public: {
