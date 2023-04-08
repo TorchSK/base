@@ -1,4 +1,3 @@
-import transformerDirective from '@unocss/transformer-directives'
 import { createResolver } from '@nuxt/kit'
 
 const { resolve } = createResolver(import.meta.url)
@@ -19,9 +18,6 @@ export default defineNuxtConfig({
         preflight: true,
         wind: true,
         icons: true,
-        transformers: [
-            transformerDirective(),
-        ],
         shortcuts: [],
         rules: [],
 
