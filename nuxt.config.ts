@@ -14,7 +14,7 @@ export default defineNuxtConfig({
             "@headlessui/vue"
         ]
     },
-    
+
     runtimeConfig: {
         public: {
             apiBase: process.env.API_BASE
