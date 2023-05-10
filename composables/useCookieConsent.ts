@@ -1,17 +1,17 @@
 export const useCookieConsent = () => {
-    
-    let value = false
+
+    const cookie = useCookie('cookieConsent')
 
     const confirm = () => {
-        value = true
+        cookie.value = true
     }
 
     const cancel = () => {
-        value = false
+        cookie.value = false
     }
 
     return {
-        value,
+        value:cookie.value,
         confirm,
         cancel
     }
