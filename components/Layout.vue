@@ -4,30 +4,8 @@
     
     <template v-for="element in layout.elements">
 
-        <ElementsHeader
-            v-if="element.type == 'header'" 
-            :element="element" 
-        />
+        <component :is="componentsMap[element.type]" :element="element" />
 
-        <ElementsBanner 
-            v-if="element.type == 'banner'" 
-            :element="element" 
-        />
-
-        <ElementsPanel 
-            v-if="element.type == 'panel'" 
-            :element="element" 
-        />
-
-        <ElementsProductGrid 
-            v-if="element.type == 'productGrid'" 
-            :element="element" 
-        />
-
-        <ElementsProductPanel 
-            v-if="element.type == 'productPanel'" 
-            :element="element" 
-        />
     </template>
 
 </div>
@@ -41,4 +19,9 @@
             required: true
         }
     })
+
+    const componentsMap = {
+        header: resolveComponent('ElementsHeader'),
+        banners: resolveComponent('ElementsBanners'),
+    }
 </script>
