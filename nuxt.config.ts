@@ -4,16 +4,10 @@ export default defineNuxtConfig({
         '@unocss/nuxt',
         '@vueuse/nuxt',
         '@nuxtjs/device',
-        '@nuxt/image-edge',
+        '@nuxt/image',
         '@nuxtjs/web-vitals'
     ],
 
-
-    build: {
-        transpile: [
-            "@headlessui/vue"
-        ]
-    },
 
     runtimeConfig: {
         public: {
