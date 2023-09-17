@@ -23,6 +23,7 @@
         header: resolveComponent('ElementsHeader'),
         banners: resolveComponent('ElementsBanners'),
         products: resolveComponent('ElementsProducts'),
+        panel: resolveComponent('ElementsPanel'),
 
     }
 </script>
