@@ -1,8 +1,7 @@
 <template>
     
-    <nuxt-img v-if="cdn" :src="src" class="max-w-full max-h-full overflow-hidden" />
+    <NuxtImg v-if="cdn" :src="src" class="max-w-full max-h-full overflow-hidden" />
     
-    <img v-else :src="src" />
 
 </template>
 

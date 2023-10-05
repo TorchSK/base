@@ -2,6 +2,8 @@ export const useApiFetch = (url:string, opts = []) => {
 
     let token = useCookie('token')
 
+    const config = useRuntimeConfig()
+
     const headers = {
         Authorization:'',
         Project: ''
@@ -17,7 +19,7 @@ export const useApiFetch = (url:string, opts = []) => {
     console.log(url)
     return useFetch(url, {
         ...opts,
-        baseURL: 'http://127.0.0.1:3333/api/',
+        baseURL: config.public.apiBase,
         headers: { ...headers },
     })
 }

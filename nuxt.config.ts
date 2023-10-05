@@ -8,10 +8,4 @@ export default defineNuxtConfig({
         '@nuxtjs/web-vitals'
     ],
 
-
-    runtimeConfig: {
-        public: {
-            apiBase: process.env.API_BASE
-        }
-    }
 })
