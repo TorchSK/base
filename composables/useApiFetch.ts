@@ -16,7 +16,6 @@ export const useApiFetch = (url:string, opts = []) => {
 
     headers['Project'] = useRuntimeConfig().public.projectHash
 
-    console.log(url)
     return useFetch(url, {
         ...opts,
         baseURL: config.public.apiBase,
