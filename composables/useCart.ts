@@ -7,7 +7,7 @@ export const useCart = () => {
     const cart = useState('cart')
     
     const getCart = async () => {  
-        const { data:response } = await useApiFetch('carts', {params: {'cookie_id': cookie.value}, lazy: true})
+        const { data:response } = await useApiFetch('carts', {params: {'cookie_id': cookie.value}})
         cart.value = response.value
     }
 
