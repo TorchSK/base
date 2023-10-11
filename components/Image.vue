@@ -1,5 +1,4 @@
 <template>
-    
     <NuxtImg v-if="cdn" :src="src" class="max-w-full max-h-full overflow-hidden" />
     
 
@@ -9,7 +8,7 @@
  
 const props = defineProps({
     image: {
-        type: Object,
+        type: [String,Object],
         required: false
     },
     type: {
@@ -24,14 +23,22 @@ const props = defineProps({
 
 let src
 
-if(props.image && props.image.cloud_id)
-{
-    src = props.image.cloud_id
-}
-else
-{
-    src="placeholder.webp"
-}
+if(props.image)
+    {
+        if (typeof props.image === 'string' || props.image instanceof String)
+        {
+            src = props.image
+        }   
+        else
+        {
+            src = props.image.cloud_id
+        }
+    }
+    else
+    {
+        src= `placeholder.webp`
+    }
+
 
 
 </script>
