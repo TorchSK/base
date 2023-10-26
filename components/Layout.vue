@@ -15,7 +15,7 @@
     defineProps({
         layout: {
             type: Object,
-            required: true
+            required: false
         }
     })
 
