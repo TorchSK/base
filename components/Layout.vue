@@ -24,6 +24,7 @@
         banners: resolveComponent('ElementsBanners'),
         products: resolveComponent('ElementsProducts'),
         panel: resolveComponent('ElementsPanel'),
+        banner: resolveComponent('ElementsBanner'),
 
     }
 </script>
